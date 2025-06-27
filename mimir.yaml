@@ -1,0 +1,41 @@
+target: all
+
+server:
+  http_listen_port: 9009
+
+blocks_storage:
+  backend: filesystem
+  filesystem:
+    dir: /tmp/mimir/blocks
+
+alertmanager_storage:
+  backend: filesystem
+  filesystem:
+    dir: /tmp/mimir/alertmanager
+
+ruler_storage:
+  backend: filesystem
+  filesystem:
+    dir: /tmp/mimir/ruler
+
+ingester:
+  wal:
+    enabled: true
+    dir: /tmp/mimir/wal
+
+distributor:
+  ring:
+    kvstore:
+      store: inmemory
+
+store_gateway:
+  sharding_enabled: true
+
+compactor:
+  sharding_enabled: true
+
+limits:
+  max_label_names_per_series: 100
+  max_series_per_query: 1000000
+  ingestion_rate: 100000
+  ingestion_burst_size: 200000
