@@ -105,6 +105,6 @@ User → Node.js → Prometheus (metrics)
                    Grafana (dashboards)
 🙋‍♂️ Author
 Sainath Mitalakar
-🚀 DevOps Engineer | Systems Architect
+🚀 DevOps & DevSecOps Engineer | 
 🔗 Topmate | LinkedIn | 🇮🇳 India
 
